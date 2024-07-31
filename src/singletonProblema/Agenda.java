@@ -1,15 +1,13 @@
-package solução;
+package singletonProblema;
 
 import java.util.HashMap;
 import java.util.Map;
 
-public class AgendaSingletonEager {
-	
-	private static final AgendaSingletonEager INSTANCE = new AgendaSingletonEager();
+public class Agenda {
 	
 	private Map<String, Boolean> diasDisponiveis = new HashMap<>();
 	
-	private AgendaSingletonEager() {
+	public Agenda() {
 		diasDisponiveis.put("Domingo", Boolean.TRUE);
 		diasDisponiveis.put("Segunda", Boolean.TRUE);
 		diasDisponiveis.put("Terça", Boolean.TRUE);
@@ -17,10 +15,6 @@ public class AgendaSingletonEager {
 		diasDisponiveis.put("Quinta", Boolean.TRUE);
 		diasDisponiveis.put("Sexta", Boolean.TRUE);
 		diasDisponiveis.put("Sabado", Boolean.TRUE);	
-	}
-	
-	public static AgendaSingletonEager getInstance() {
-		return INSTANCE;
 	}
 	
 	public Map<String, Boolean> getDiasDisponiveis(){

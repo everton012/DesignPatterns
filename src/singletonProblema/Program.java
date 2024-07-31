@@ -1,4 +1,4 @@
-package singleton;
+package singletonProblema;
 
 public class Program {
 

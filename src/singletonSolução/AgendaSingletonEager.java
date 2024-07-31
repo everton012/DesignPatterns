@@ -1,16 +1,15 @@
-package solução;
+package singletonSolução;
 
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Objects;
 
-public class AgendaSingletonLazy {
+public class AgendaSingletonEager {
 	
-	private static AgendaSingletonLazy INSTANCE = null;
+	private static final AgendaSingletonEager INSTANCE = new AgendaSingletonEager();
 	
 	private Map<String, Boolean> diasDisponiveis = new HashMap<>();
 	
-	private AgendaSingletonLazy() {
+	private AgendaSingletonEager() {
 		diasDisponiveis.put("Domingo", Boolean.TRUE);
 		diasDisponiveis.put("Segunda", Boolean.TRUE);
 		diasDisponiveis.put("Terça", Boolean.TRUE);
@@ -19,13 +18,8 @@ public class AgendaSingletonLazy {
 		diasDisponiveis.put("Sexta", Boolean.TRUE);
 		diasDisponiveis.put("Sabado", Boolean.TRUE);	
 	}
-	//A vantagem de usar o método Lazy é que só vai ser instanciado a classe se o método get for chamado.
-	//Dessa forma se ninguém chamar, não vai haver classe aberta sem precisão.
-	public static AgendaSingletonLazy getInstance() {
-		if(Objects.isNull(INSTANCE)) {
-			INSTANCE = new AgendaSingletonLazy();
-			return INSTANCE;
-		}
+	
+	public static AgendaSingletonEager getInstance() {
 		return INSTANCE;
 	}
 	

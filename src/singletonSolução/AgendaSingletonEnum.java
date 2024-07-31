@@ -1,7 +1,7 @@
 //Esse é o método mais correto pois ele não permite nenhum tipo de alteração no construtor.
 //Dessa forma nós garantimos que somente haverá uma instancia.
 
-package solução;
+package singletonSolução;
 
 import java.util.HashMap;
 import java.util.Map;

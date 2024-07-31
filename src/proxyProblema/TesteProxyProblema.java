@@ -10,11 +10,11 @@ public class TesteProxyProblema {
 		/*PessoaService pessoaService = new PessoaService(new PessoaRepository());
 		
 		Pessoa pessoa = new Pessoa.PessoaBuilder()
-				.name("Everton")
+				.name("Carlos")
 				.lastname("Clemente")
-				.dataNascimento(LocalDate.of(1994, 3, 11))
-				.document("36498901861")
-				.email("everton@gmail.com")
+				.dataNascimento(LocalDate.of(1999, 3, 11))
+				.document("01865765423")
+				.email("carlos@gmail.com")
 				.build();
 		pessoaService.save(pessoa);
 		

@@ -1,4 +1,4 @@
-package solução;
+package singletonSolução;
 
 public class ProgramComSingleton {
 
